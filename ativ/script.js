@@ -256,48 +256,45 @@
 
 // calcularIMC();
 
-// // 11.
+// 11.
 
-// function calcularPrecoFinal(precoEtiqueta, codigoCondicao) {
-//     let precoFinal = 0
+function calcularPrecoFinal(precoEtiqueta, codigoCondicao) {
+    let precoFinal = 0
 
-//     switch (codigoCondicao) {
-//         case 1:
-//             precoFinal = precoEtiqueta * 0.9 
-//             break
-//         case 2:
-//             precoFinal = precoEtiqueta * 0.85 
-//             break
-//         case 3:
-//             precoFinal = precoEtiqueta; 
-//             break
-//         case 4:
-//             precoFinal = precoEtiqueta * 1.1 
-//             break
-//         default:
-//             console.log("Código de condição de pagamento inválido.");
-//             return null
-//     }
+    switch (codigoCondicao) {
+        case 1:
+            precoFinal = precoEtiqueta * 0.9 
+            break
+        case 2:
+            precoFinal = precoEtiqueta * 0.85 
+            break
+        case 3:
+            precoFinal = precoEtiqueta
+            break
+        case 4:
+            precoFinal = precoEtiqueta * 1.1 
+            break
+        default:
+            console.log("Código de condição de pagamento inválido.")
+            return null
+    }
 
-//     return precoFinal.toFixed(2) 
-// }
+    return precoFinal.toFixed(2) 
+}
 
-// let precoEtiqueta = parseFloat(prompt("Digite o preço normal do produto:"))
+let precoEtiqueta = parseFloat(prompt("Digite o preço normal do produto:"))
 
 
-// let codigoCondicao = parseInt(prompt(`Escolha a condição de pagamento:
-// 1 - À vista em dinheiro ou cheque (10% de desconto)
-// 2 - À vista no cartão de crédito (15% de desconto)
-// 3 - Em duas vezes sem juros
-// 4 - Em duas vezes com juros de 10%
-// Digite o código da condição:`))
+let codigoCondicao = parseInt(prompt(`Escolha a condição de pagamento:
+1 - À vista em dinheiro ou cheque (10% de desconto)
+2 - À vista no cartão de crédito (15% de desconto)
+3 - Em duas vezes sem juros
+4 - Em duas vezes com juros de 10%
+Digite o código da condição:`))
 
-// let precoFinal = calcularPrecoFinal(precoEtiqueta, codigoCondicao)
+let precoFinal = calcularPrecoFinal(precoEtiqueta, codigoCondicao)
 
-// if (precoFinal !== null) {
-//     console.log(`O preço a ser pago é R$ ${precoFinal}`)
+if (precoFinal !== null) {
+    console.log(`O preço a ser pago é R$ ${precoFinal}`)
 
-// }
-
-// 12. 
-
+}
